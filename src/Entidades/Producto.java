@@ -1,3 +1,5 @@
+package Entidades;
+
 public class Producto {
     private int idProducto;
     private String codigo;
@@ -54,4 +56,12 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    @Override
+    public String toString() {
+        return "Producto{" + "idProducto=" + idProducto + ", codigo=" + codigo + ", nombre=" + nombre + ", cantidad=" + cantidad + ", precio=" + precio + '}';
+    }
+    
+    
+    
 }
