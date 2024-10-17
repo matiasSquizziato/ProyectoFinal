@@ -13,7 +13,6 @@ public class Reserva {
     private boolean estado; 
 
     // Constructor
-
     public Reserva(int idReserva, int idMesa, String nombreCliente, int dniCliente, LocalDate fechaReserva, LocalTime horaReserva, boolean estado) {
         this.idReserva = idReserva;
         this.idMesa = idMesa;
@@ -22,6 +21,20 @@ public class Reserva {
         this.fechaReserva = fechaReserva;
         this.horaReserva = horaReserva;
         this.estado = estado;
+    }
+
+        // Constructor sin IdReserva
+    public Reserva(int idMesa, String nombreCliente, int dniCliente, LocalDate fechaReserva, LocalTime horaReserva, boolean estado) {
+        this.idMesa = idMesa;
+        this.nombreCliente = nombreCliente;
+        this.dniCliente = dniCliente;
+        this.fechaReserva = fechaReserva;
+        this.horaReserva = horaReserva;
+        this.estado = estado;
+    }
+
+        // Constructor vacío
+    public Reserva() {
     }
 
    

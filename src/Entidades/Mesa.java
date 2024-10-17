@@ -10,20 +10,24 @@ public class Mesa {
     private boolean estado;
     private List<Reserva> reservas; // Relación uno a muchos
 
-    // Constructor
-//    public Mesa(int idMesa, int numeroMesa, int capacidad, boolean estado, List<Reserva> reservas) {
-//        this.idMesa = idMesa;
-//        this.numeroMesa = numeroMesa;
-//        this.capacidad = capacidad;
-//        this.estado = estado;
-//        this.reservas = reservas;
-//    }
-
+    // Constructor completo
     public Mesa(int idMesa, int numeroMesa, int capacidad, boolean estado) {
         this.idMesa = idMesa;
         this.numeroMesa = numeroMesa;
         this.capacidad = capacidad;
         this.estado = estado;
+    }
+    
+    // Constructor sin IdMesa
+    public Mesa(int numeroMesa, int capacidad, boolean estado) {
+        this.idMesa = idMesa;
+        this.numeroMesa = numeroMesa;
+        this.capacidad = capacidad;
+        this.estado = estado;
+    }
+    
+    //Constructor vacío
+    public Mesa() {
     }
 
     
