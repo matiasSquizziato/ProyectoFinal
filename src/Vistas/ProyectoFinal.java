@@ -4,7 +4,6 @@ package Vistas;
 import AccesoADatos.ConexionData;
 import AccesoADatos.MesaData;
 import AccesoADatos.MozoData;
-import AccesoADatos.MozoData1;
 import AccesoADatos.ReservaData;
 import Entidades.Mesa;
 import Entidades.Mesero;
@@ -50,7 +49,7 @@ public class ProyectoFinal {
 
 
 
-        Mesero mozo1 = new Mesero(01,"Squizziato", "Matias", 42278369, LocalDate.of(1999, Month.MARCH, 3));
+        Mesero mozo1 = new Mesero("Squizziato", "Matias", 42278369, LocalDate.of(1999, Month.MARCH, 3));
         
         MozoData mozoData  = new MozoData();
         
