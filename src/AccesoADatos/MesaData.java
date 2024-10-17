@@ -19,7 +19,7 @@ public class MesaData {
     private Connection con = null;
     
     public MesaData(){
-        con = Conexion.getConexion();
+        con = ConexionData.getConexion();
     }
     
     public void cargarMesa(Mesa mesa){

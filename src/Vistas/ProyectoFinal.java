@@ -1,9 +1,10 @@
 
 package Vistas;
 
-import AccesoADatos.Conexion;
+import AccesoADatos.ConexionData;
 import AccesoADatos.MesaData;
 import AccesoADatos.MozoData;
+import AccesoADatos.MozoData1;
 import AccesoADatos.ReservaData;
 import Entidades.Mesa;
 import Entidades.Mesero;
@@ -11,6 +12,7 @@ import Entidades.Reserva;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.LocalTime;
+import org.mariadb.jdbc.Connection;
 
 /**
  *
@@ -44,11 +46,15 @@ public class ProyectoFinal {
 //        reData.hacerReserva(r1, m1.getIdMesa());
 //        reData.hacerReserva(r2, m2.getIdMesa());
 //        
+
+
+
+
         Mesero mozo1 = new Mesero(01,"Squizziato", "Matias", 42278369, LocalDate.of(1999, Month.MARCH, 3));
         
         MozoData mozoData  = new MozoData();
         
-        mozoData.cargarMozo(mozo1);
+        mozoData.guardarMozo(mozo1);
         
         
         

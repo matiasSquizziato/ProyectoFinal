@@ -5,15 +5,14 @@
 package AccesoADatos;
 
 import Entidades.Mesero;
-
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import java.sql.Date;
 import java.sql.ResultSet;
-import java.sql.Connection;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,30 +20,25 @@ import java.sql.Connection;
  */
 public class MozoData {
     
-    
     private Connection con = null;
-    
-    
     
     public MozoData(){
         
-        con = (Connection) Conexion.getConexion();
+        con = ConexionData.getConexion();
         
     }
     
     
-    
-    public void cargarMozo(Mesero mozo){
+    //Guardar Mozo
+    public void guardarMozo(Mesero mozo){
         
-        System.out.println(con);
-        
-        String sql = "INSERT INTO mesero(nombre, apellido, dni, fechaRegistro) VALUES (?,?,?,?) ";
+        String sql = "INSERT INTO mesero(apellido, nombre, dni, fecha_registro) VALUES (?,?,?,?)";
         
         try {
             PreparedStatement ps = con.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             
-            ps.setString(1, mozo.getNombre());
-            ps.setString(2, mozo.getApellido());
+            ps.setString(1, mozo.getApellido());
+            ps.setString(2, mozo.getNombre());
             ps.setInt(3, mozo.getDni());
             ps.setDate(4, Date.valueOf(mozo.getFechaRegistro()));
             
@@ -54,19 +48,19 @@ public class MozoData {
             
             if (rs.next()) {
                 
-                JOptionPane.showMessageDialog(null, "Mozo cargado con exito");
+                JOptionPane.showMessageDialog(null, "Mozo; " + mozo.getApellido()+ " " + mozo.getNombre()+ "" + ", guardado con exito!");
                 
             }
             
-            
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null,"ERROR AL INGRESASR A LA TABLA MESERO" + ex.getMessage());
+           
+            JOptionPane.showMessageDialog(null,"Error al ingresar a la tabla mesero"+ ex.getMessage());
+            
         }
         
         
         
         
-                
         
     }
     
