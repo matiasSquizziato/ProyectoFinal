@@ -14,7 +14,7 @@ public class Mesero {
     private List<Pedido> pedidos;
     
 
-    // Constructor
+    // Constructor completo
     public Mesero(int idMesero, String nombre, String apellido, String dni, Date fechaRegistro) {
         this.idMesero = idMesero;
         this.nombre = nombre;
@@ -23,8 +23,16 @@ public class Mesero {
         this.fechaRegistro = fechaRegistro;
         this.pedidos = new ArrayList<>(); // Inicializa la lista de pedidos
     }
+    //Constructor sin ID
+    public Mesero(String nombre, String apellido, String dni, Date fechaRegistro) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fechaRegistro = fechaRegistro;
+        this.pedidos = new ArrayList<>(); // Inicializa la lista de pedidos
+    }
 
-    //Vacio
+    //Constructor Vacio
     
     public Mesero() {
     }

@@ -13,6 +13,17 @@ public class Producto {
         this.cantidad = cantidad;
         this.precio = precio;
     }
+    
+    // Constructor sin IdProducto
+    public Producto(String codigo, String nombre, int cantidad, double precio) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+     // Constructor vacío
+    public Producto() {
+    }
 
     // Getters y Setters
     public int getIdProducto() {

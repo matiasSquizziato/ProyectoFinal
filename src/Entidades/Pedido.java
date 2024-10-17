@@ -21,6 +21,19 @@ public class Pedido {
         this.fechaPedido = fechaPedido;
         this.detalles = new ArrayList<>(); // Inicializa la lista de detalles
     }
+    
+    // Constructor sin IdPedido
+    public Pedido(Mesa mesa, Mesero mesero, String estado, Date fechaPedido) {
+        this.mesa = mesa;
+        this.mesero = mesero;
+        this.estado = estado;
+        this.fechaPedido = fechaPedido;
+        this.detalles = new ArrayList<>(); // Inicializa la lista de detalles
+    }
+    
+    // Constructor sin IdPedido
+    public Pedido(){
+    }
 
     // Getters y Setters
     public int getIdPedido() {
