@@ -22,7 +22,7 @@ public class ReservaData {
     private Connection con = null;
     
     public ReservaData(){
-        con = Conexion.getConexion();
+        con = ConexionData.getConexion();
     }
     
     public void hacerReserva(Reserva reserva, int idMesa){

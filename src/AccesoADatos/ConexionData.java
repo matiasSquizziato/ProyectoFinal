@@ -1,4 +1,3 @@
-
 package AccesoADatos;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,30 +8,27 @@ import javax.swing.JOptionPane;
  *
  * @author matiSqui
  */
-public class Conexion {
+public class ConexionData {
     
     // Atributos para la URL, la base de datos, el usuario y la contraseña
-    private static final String URL = "jdbc:mariadb://localhost:3306/";
-    private static final String DB = "restoulpfinal";
+    private static final String URL = "jdbc:mariadb://localhost:3306/restoulpfinal";
     private static final String USUARIO = "root";
     private static final String PASSWORD = "";
     
+    // Atributo estático para la conexión
+    private static Connection connection1;
     
-     // Atributo estático para la conexión
-    private static Connection connection;
-    
-    private Conexion() {}
-    
+    private ConexionData() {}
     
     // Método estático para obtener la conexión
     public static Connection getConexion() {
-        if (connection == null) {
+        if (connection1 == null) {
             try {
                 // Registrar el driver de MariaDB
                 Class.forName("org.mariadb.jdbc.Driver");
 
                 // Crear la conexión a la base de datos
-                connection = DriverManager.getConnection(URL + DB, USUARIO, PASSWORD);
+                connection1 = DriverManager.getConnection(URL, USUARIO, PASSWORD);
 
                 JOptionPane.showMessageDialog(null, "Conexión exitosa!");
 
@@ -42,7 +38,6 @@ public class Conexion {
                 JOptionPane.showMessageDialog(null, "Error al conectarse a la base de datos: " + ex.getMessage());
             }
         }
-        return connection;
+        return connection1;
     }
-    
 }
