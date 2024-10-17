@@ -18,6 +18,8 @@ public class Mesero {
     // Constructor
 
     public Mesero(int idMesero, String nombre, String apellido, int dni, LocalDate fechaRegistro, List<Pedido> pedidos) {
+
+    // Constructor completo
         this.idMesero = idMesero;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -25,18 +27,17 @@ public class Mesero {
         this.fechaRegistro = fechaRegistro;
         this.pedidos = pedidos;
     }
-
-    public Mesero(int idMesero, String nombre, String apellido, int dni, LocalDate fechaRegistro) {
-        this.idMesero = idMesero;
+    
+    //Constructor sin ID
+    public Mesero(String nombre, String apellido, int dni, LocalDate fechaRegistro) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.fechaRegistro = fechaRegistro;
+        this.pedidos = new ArrayList<>(); // Inicializa la lista de pedidos
     }
-  
- 
 
-    //Vacio
+    //Constructor Vacio
     public Mesero() {
     }
     

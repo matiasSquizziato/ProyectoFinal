@@ -17,6 +17,19 @@ public class DetallePedido {
         this.subtotal = subtotal;
     }
 
+    // Constructor sin IdDetalle
+    public DetallePedido(int idPedido, int idProducto, int cantidadProducto, double subtotal) {
+        this.idPedido = idPedido;
+        this.idProducto = idProducto;
+        this.cantidadProducto = cantidadProducto;
+        this.subtotal = subtotal;
+    }
+    
+    // Constructor vacío
+    public DetallePedido(){
+    }
+    
+    
     // Getters y Setters
     public int getIdDetalle() {
         return idDetalle;

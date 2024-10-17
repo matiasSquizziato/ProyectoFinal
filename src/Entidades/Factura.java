@@ -9,12 +9,23 @@ public class Factura {
     private double total;
     private Date fechaFactura;
 
-    // Constructor
+    // Constructor completo
     public Factura(int idFactura, Pedido pedido, double total, Date fechaFactura) {
         this.idFactura = idFactura;
         this.pedido = pedido; // Asigna el objeto Pedido
         this.total = total;
         this.fechaFactura = fechaFactura;
+    }
+    
+     // Constructor sin IdFactura
+    public Factura(Pedido pedido, double total, Date fechaFactura) {
+        this.pedido = pedido; // Asigna el objeto Pedido
+        this.total = total;
+        this.fechaFactura = fechaFactura;
+    }
+    
+     // Constructor vacío
+    public Factura() {
     }
 
     // Getters y Setters
