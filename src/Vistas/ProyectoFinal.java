@@ -49,11 +49,11 @@ public class ProyectoFinal {
 
 
 
-        Mesero mozo1 = new Mesero("Squizziato", "Matias", 42278369, LocalDate.of(1999, Month.MARCH, 3));
+        //Mesero mozo1 = new Mesero("Squizziato", "Matias", 42278369, LocalDate.of(1999, Month.MARCH, 3));
         
-        MozoData mozoData  = new MozoData();
+        //MozoData mozoData  = new MozoData();
         
-        mozoData.guardarMozo(mozo1);
+        //mozoData.guardarMozo(mozo1);
         
         
         

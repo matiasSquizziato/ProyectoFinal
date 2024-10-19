@@ -1,7 +1,8 @@
 package Entidades;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+//import java.util.Date;
 import java.util.List;
 
 public class Pedido {
@@ -9,11 +10,11 @@ public class Pedido {
     private Mesa mesa; // Cambiado a tipo Mesa en lugar de int
     private Mesero mesero; // Cambiado a tipo Mesero
     private String estado; // Puede ser 'pendiente' o 'pagado'
-    private Date fechaPedido;
+    private LocalDate fechaPedido;
     private List<DetallePedido> detalles; // Detalles del pedido
 
     // Constructor
-    public Pedido(int idPedido, Mesa mesa, Mesero mesero, String estado, Date fechaPedido) {
+    public Pedido(int idPedido, Mesa mesa, Mesero mesero, String estado, LocalDate fechaPedido) {
         this.idPedido = idPedido;
         this.mesa = mesa;
         this.mesero = mesero;
@@ -23,7 +24,7 @@ public class Pedido {
     }
     
     // Constructor sin IdPedido
-    public Pedido(Mesa mesa, Mesero mesero, String estado, Date fechaPedido) {
+    public Pedido(Mesa mesa, Mesero mesero, String estado, LocalDate fechaPedido) {
         this.mesa = mesa;
         this.mesero = mesero;
         this.estado = estado;
@@ -68,11 +69,11 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public Date getFechaPedido() {
+    public LocalDate getFechaPedido() {
         return fechaPedido;
     }
 
-    public void setFechaPedido(Date fechaPedido) {
+    public void setFechaPedido(LocalDate fechaPedido) {
         this.fechaPedido = fechaPedido;
     }
 
